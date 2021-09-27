@@ -11,11 +11,15 @@ const Card = ({ data }) => {
           </div>
           <div className="details">
             <h4>LOCATION</h4>
-            <h1>{`${data.location.city}, ${data.location.country}`}</h1>
+            <h1>
+              {data.length !== 0
+                ? `${data.location.city}, ${data.location.country}`
+                : null}
+            </h1>
           </div>
           <div className="details">
             <h4>TIMEZONE</h4>
-            <h1>{data.location.timezone}</h1>
+            <h1>{data.length !== 0 ? data.location.timezone : null}</h1>
           </div>
           <div className="details">
             <h4>ISP</h4>
